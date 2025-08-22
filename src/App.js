@@ -87,7 +87,7 @@ function App() {
               placeholder="Password"
               value={password.value}
               onChange={e => setPassword({ ...password, value: e.target.value })}
-              onFocus={handleFocus}
+              onBlur={(e)=>setPassword({...password, isTouched: true})}
             />
             {
               password.value.length < 8 &&
